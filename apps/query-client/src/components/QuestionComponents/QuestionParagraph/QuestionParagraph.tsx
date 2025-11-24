@@ -1,9 +1,5 @@
 import { CSSProperties, FC } from "react";
-
-type PropsType = {
-    text: string
-    isCenter: boolean
-}
+import { QuestionParagraphPropsType as PropsType } from "@my-repo/types";
 
 const QuestionParagraph: FC<PropsType> = (props) => {
     const { text, isCenter } = props
@@ -11,7 +7,7 @@ const QuestionParagraph: FC<PropsType> = (props) => {
     const style: CSSProperties = {}
     if (isCenter) style.textAlign = 'center'
 
-    const textList = text.split('\n')
+    const textList = text!.split('\n')
 
     return (
         <p style={style}>

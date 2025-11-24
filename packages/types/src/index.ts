@@ -11,23 +11,60 @@ export type QuestionCheckboxPropsType = {
     list?: OptionType[];
 };
 
-export type QuestionTitlePropType = {
+export type QuestionInfoPropsType = {
+    title?: string;
+    description?: string;
+};
+
+export type QuestionInputPropsType = {
+    title?: string;
+    placeholder?: string;
+};
+
+export type QuestionParagraphPropsType = {
+    text?: string;
+    isCenter?: boolean;
+};
+
+export type RadioOptionType = {
+    value: string;
+    text: string;
+};
+
+export type QuestionRadioPropsType = {
+    title?: string;
+    isVertical?: boolean;
+    options?: RadioOptionType[];
+    value?: string;
+};
+
+export type QuestionTextareaPropsType = {
+    title?: string;
+    placeholder?: string;
+};
+
+export type QuestionTitlePropsType = {
     text?: string;
     level?: 1 | 2 | 3 | 4 | 5;
     isCenter?: boolean;
-
-    onChange?: (newProps: QuestionTitlePropType) => void;
-    disable?: boolean;
 };
 
-// 2. 定义通用的组件数据模型 (三端通用)
-// 所有的组件在数据库里大概长这样
+export interface ComponentCheckbox {
+    fe_id: string;
+    props: QuestionCheckboxPropsType;
+}
 
+export interface QuestionInput {
+    fe_id: string;
+    props: QuestionInputPropsType;
+}
 
-export interface ComponentInfo {
-    fe_id: string; // 前端生成的 ID
-    type: string;  // 组件类型，如 'questionInput'
-    isHidden?: boolean;
-    isLocked?: boolean;
-    props: QuestionInputProps; // 这里引用上面的定义
+export interface QuestionRadio {
+    fe_id: string
+    props: QuestionRadioPropsType
+}
+
+export interface QuestionTextarea {
+    fe_id: string
+    props: QuestionTextareaPropsType
 }

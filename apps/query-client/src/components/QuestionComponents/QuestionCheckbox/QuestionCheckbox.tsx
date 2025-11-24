@@ -1,18 +1,6 @@
 import { FC, useEffect, useState } from "react"
 import styles from './QuestionCheckbox.module.scss'
-
-type PropsType = {
-    fe_id: string
-    props: {
-        title: string
-        isVertical: boolean
-        list: Array<{
-            value: string
-            text: string
-            checked: boolean
-        }>
-    }
-}
+import { ComponentCheckbox as PropsType } from '@Cookie-repo/types'
 
 const QuestionCheckbox: FC<PropsType> = ({ fe_id, props }) => {
     const [selectedValues, setSelectedValues] = useState<string[]>([])

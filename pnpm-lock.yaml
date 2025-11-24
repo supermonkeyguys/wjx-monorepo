@@ -27,6 +27,12 @@ importers:
         specifier: ^1.93.2
         version: 1.94.2
     devDependencies:
+      '@Cookie-repo/common':
+        specifier: 'workspace: *'
+        version: link:../../packages/common
+      '@Cookie-repo/types':
+        specifier: 'workspace: *'
+        version: link:../../packages/types
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1

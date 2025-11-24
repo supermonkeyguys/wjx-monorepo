@@ -1,12 +1,8 @@
-export type QuestionParagraphPropsType = {
-  text?: string;
-  isCenter?: boolean;
+import type { QuestionParagraphPropsType as Shared } from "@Cookie-repo/types";
 
+export type QuestionParagraphPropsType = Shared & {
   onChange?: (newProps: QuestionParagraphPropsType) => void;
   disabled?: boolean;
 };
 
-export const QuestionParagraphDefaultProps: QuestionParagraphPropsType = {
-  text: "一行段落",
-  isCenter: false,
-};
+export { QuestionParagraphDefaultProps } from "@Cookie-repo/common";

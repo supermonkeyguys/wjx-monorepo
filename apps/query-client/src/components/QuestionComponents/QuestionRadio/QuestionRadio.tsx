@@ -1,18 +1,6 @@
 import { FC } from "react";
 import styles from './QuestionRadio.module.scss'
-
-type PropsType = {
-    fe_id: string
-    props: {
-        title: string
-        options: Array<{
-            value: string
-            text: string
-        }>
-        value: string
-        isVertical: boolean
-    }
-}
+import { QuestionRadio as PropsType } from "@my-repo/types";
 
 
 const QuestionRadio: FC<PropsType> = ({ fe_id, props }) => {

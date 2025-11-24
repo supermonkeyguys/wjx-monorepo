@@ -1,10 +1,5 @@
 import { FC } from "react";
-
-type PropsType = {
-    title: string
-    description: string
-}
-
+import { QuestionInfoPropsType as PropsType } from "@my-repo/types";
 
 const QuestionInfo: FC<PropsType> = (props) => {
     const { title, description } = props

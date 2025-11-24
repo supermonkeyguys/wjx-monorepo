@@ -1,5 +1,4 @@
 {
-  "extends": "@Cookie-repo/tsconfig/base.json", // 继承公共配置
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

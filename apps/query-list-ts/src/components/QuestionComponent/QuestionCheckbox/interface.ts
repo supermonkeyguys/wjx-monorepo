@@ -1,27 +1,12 @@
-export type OptionType = {
-  value: string;
-  text: string;
-  checked: boolean;
-};
+import type { QuestionCheckboxPropsType as Shared, } from '@Cookie-repo/types';
 
-export type QuestionCheckboxPropsType = {
-  title?: string;
-  isVertical?: boolean;
-  list?: OptionType[];
-
+export type QuestionCheckboxPropsType = Shared & {
   onChange?: (newProps: QuestionCheckboxPropsType) => void;
   disabled?: boolean;
 };
 
-export const QuestionCheckboxDefaultProps: QuestionCheckboxPropsType = {
-  title: "多选框",
-  isVertical: false,
-  list: [
-    { value: "item1", text: "选项1", checked: false },
-    { value: "item2", text: "选项2", checked: false },
-    { value: "item3", text: "选项3", checked: false },
-  ],
-};
+export { QuestionCheckboxDefaultProps } from '@Cookie-repo/common';
+export type { OptionType } from '@Cookie-repo/types';
 
 export type QuestionCheckboxStatPropsType = {
   stat: Array<{ name: string; count: string }>;

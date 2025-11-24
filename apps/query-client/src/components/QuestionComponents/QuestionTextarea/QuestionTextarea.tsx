@@ -1,13 +1,6 @@
 import { FC } from "react"
 import styles from './QuestionTextarea.module.scss'
-
-type PropsType = {
-    fe_id: string,
-    props: {
-        title: string
-        placeholder?: string
-    }
-}
+import { QuestionTextarea as PropsType } from "@my-repo/types"
 
 const QuestionTextarea: FC<PropsType> = ({ fe_id, props }) => {
     const { title, placeholder } = props
@@ -16,7 +9,7 @@ const QuestionTextarea: FC<PropsType> = ({ fe_id, props }) => {
         <>
             <p>{title}</p>
             <div className={styles.textAreaWrapper}>
-                <textarea name={fe_id} placeholder={placeholder} rows={5}/>
+                <textarea name={fe_id} placeholder={placeholder} rows={5} />
             </div>
         </>
     )

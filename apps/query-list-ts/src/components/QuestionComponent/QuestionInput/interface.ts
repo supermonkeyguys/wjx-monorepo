@@ -1,4 +1,4 @@
-import type { QuestionInputProps as SharedProps } from '@Cookie-repo/types';
+import type { QuestionInputPropsType as SharedProps } from '@Cookie-repo/types';
 
 export type QuestionInputPropType = SharedProps & {
   onChange?: (newProps: QuestionInputPropType) => void;

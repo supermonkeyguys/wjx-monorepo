@@ -1,5 +1,5 @@
 import { useEffect, type FC } from "react";
-import type { OptionType, QuestionRadioPropsType } from "./interface";
+import type { RadioOptionType, QuestionRadioPropsType } from "./interface";
 import { Button, Checkbox, Form, Input, Select, Space } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import { nanoid } from "@reduxjs/toolkit";
@@ -60,7 +60,7 @@ const PropComponent: FC<QuestionRadioPropsType> = (
                           validator: (_, text) => {
                             const { options = [] } = form.getFieldsValue();
                             let num = 0;
-                            options.forEach((opt: OptionType) => {
+                            options.forEach((opt: RadioOptionType) => {
                               if (opt.text === text) num++;
                             });
                             if (num === 1) return Promise.resolve();

@@ -1,12 +1,8 @@
-export type QuestionTextareaPropType = {
-  title?: string;
-  placeholder?: string;
+import type { QuestionTextareaPropsType as Shared } from '@Cookie-repo/types';
 
+export type QuestionTextareaPropType = Shared & {
   onChange?: (newProps: QuestionTextareaPropType) => void;
   disable?: boolean;
 };
 
-export const QuestionTextareaDefaultProp: QuestionTextareaPropType = {
-  title: "输入框标题",
-  placeholder: "请输入...",
-};
+export { QuestionTextareaDefaultProp } from '@Cookie-repo/common'

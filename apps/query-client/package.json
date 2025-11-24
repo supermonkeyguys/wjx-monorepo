@@ -15,6 +15,8 @@
     "sass": "^1.93.2"
   },
   "devDependencies": {
+    "@Cookie-repo/types": "workspace: *",
+    "@Cookie-repo/common": "workspace: *",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

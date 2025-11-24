@@ -1,14 +1,8 @@
-export type QuestionTitlePropType = {
-  text?: string;
-  level?: 1 | 2 | 3 | 4 | 5;
-  isCenter?: boolean;
+import type { QuestionTitlePropsType as Shared } from '@Cookie-repo/types';
 
-  onChange?: (newProps: QuestionTitlePropType) => void;
+export type QuestionTitlePropsType = Shared & {
+  onChange?: (newProps: QuestionTitlePropsType) => void;
   disable?: boolean;
 };
 
-export const QuestionTitleDefaultProp: QuestionTitlePropType = {
-  text: "一行标题",
-  level: 1,
-  isCenter: false,
-};
+export { QuestionTitleDefaultProp } from '@Cookie-repo/common'

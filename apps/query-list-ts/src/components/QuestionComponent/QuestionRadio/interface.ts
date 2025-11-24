@@ -1,28 +1,12 @@
-export type OptionType = {
-  value: string;
-  text: string;
-};
+import type { QuestionRadioPropsType as Shared } from '@Cookie-repo/types';
 
-export type QuestionRadioPropsType = {
-  title?: string;
-  isVertical?: boolean;
-  options?: OptionType[];
-  value?: string;
-
+export type QuestionRadioPropsType = Shared & {
   onChange?: (newProps: QuestionRadioPropsType) => void;
   disabled?: boolean;
 };
 
-export const QuestionRadioDefaultProps: QuestionRadioPropsType = {
-  title: "单选标题",
-  isVertical: false,
-  options: [
-    { value: "item1", text: "选项1" },
-    { value: "item2", text: "选项2" },
-    { value: "item3", text: "选项3" },
-  ],
-  value: "",
-};
+export type { RadioOptionType } from '@Cookie-repo/types'
+export { QuestionRadioDefaultProps } from '@Cookie-repo/common'
 
 export type QuestionRadioStatPropsType = {
   stat: Array<{ name: string; count: number }>;
