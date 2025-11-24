@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 关键：任何命令失败立即退出
+set -e
+
+# 1. 类型检查（拦截语法错误和类型错误）
+echo "🔍 Type checking..."
+npm run type-check
+
+# 2. 代码格式化（自动修复格式问题）
+echo "🎨 Formatting..."
+npm run format
+
+# 3. 运行测试（确保功能正常）
+echo "🧪 Running tests..."
+npm run test
+
+# 4. 把格式化后的文件重新加入暂存区
+echo "✅ Adding formatted files to commit..."
+git add .

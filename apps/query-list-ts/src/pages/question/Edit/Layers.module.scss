@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  padding: 6px 0;
+  border-bottom: 1px solid #e0e0e0;
+  .title {
+    flex: auto;
+    line-height: 2;
+  }
+
+  .selected {
+    color: #1890ff;
+  }
+
+  .handler {
+    width: 50px;
+    text-align: end;
+    .btn {
+      opacity: 0.2;
+    }
+  }
+
+  &:hover {
+    .handler {
+      .btn {
+        opacity: 1;
+      }
+    }
+  }
+}

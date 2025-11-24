@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+
+  .left {
+    text-align: start;
+  }
+
+  .right {
+    text-align: end;
+  }
+}
+.content {
+  margin-bottom: 20px;
+}
+.footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
