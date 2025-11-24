@@ -57,9 +57,12 @@ importers:
 
   apps/query-list-ts:
     dependencies:
-      '@Cookie-repo':
+      '@Cookie-repo/common':
         specifier: 'workspace: *'
-        version: link:../..
+        version: link:../../packages/common
+      '@Cookie-repo/types':
+        specifier: 'workspace: *'
+        version: link:../../packages/types
       '@ant-design/icons':
         specifier: ^5.6.1
         version: 5.6.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)

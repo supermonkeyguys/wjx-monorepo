@@ -10,8 +10,8 @@
     "paths": {
       "@/*": ["./src/*"],
       // 👇 添加这一行，手动指定路径
-      "@my-repo/types": ["../../packages/types/src/index.ts"],
-      "@my-repo/common": ["../../packages/common/src/index.ts"]
+      "@Cookie-repo/types": ["../../packages/types/src/index.ts"],
+      "@Cookie-repo/common": ["../../packages/common/src/index.ts"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

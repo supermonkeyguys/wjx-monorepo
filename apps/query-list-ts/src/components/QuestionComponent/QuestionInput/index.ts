@@ -1,5 +1,5 @@
 import Component from "./Component";
-import { QuestionInputDefaultProp } from "@my-repo/common";
+import { QuestionInputDefaultProp } from "@Cookie-repo/common";
 import PropComponent from "./PropComponent";
 export * from "./interface";
 
